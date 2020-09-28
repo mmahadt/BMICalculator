@@ -27,22 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
-//        final EditText et_kg = findViewById(R.id.et_kg);
-//
-//        final EditText et_feet = findViewById(R.id.et_feet);
-//
-//        final EditText et_inches = findViewById(R.id.et_inches);
-//        final TextView tv_res = findViewById(R.id.tv_res);
-//
-//        final Button bt_convert = findViewById(R.id.bt_convert);
-
         Fragment homeFragment = new HomeFragment();
         final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, homeFragment);
         transaction.addToBackStack(null);
         transaction.commit();
-
-
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
