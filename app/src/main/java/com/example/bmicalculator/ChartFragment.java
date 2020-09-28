@@ -14,7 +14,8 @@ public class ChartFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_chart,null);
+        ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_chart, null);
         return viewGroup;
     }
+
 }
