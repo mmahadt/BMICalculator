@@ -8,7 +8,12 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -21,13 +26,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
-        final FrameLayout frameLayout = findViewById(R.id.frame_layout);
+
+//        final EditText et_kg = findViewById(R.id.et_kg);
+//
+//        final EditText et_feet = findViewById(R.id.et_feet);
+//
+//        final EditText et_inches = findViewById(R.id.et_inches);
+//        final TextView tv_res = findViewById(R.id.tv_res);
+//
+//        final Button bt_convert = findViewById(R.id.bt_convert);
 
         Fragment homeFragment = new HomeFragment();
         final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, homeFragment);
         transaction.addToBackStack(null);
         transaction.commit();
+
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
